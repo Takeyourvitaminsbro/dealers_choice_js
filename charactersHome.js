@@ -20,7 +20,7 @@ module.exports = (posts) => `<!DOCTYPE html>
             
           </p>
           <small class>
-            ${post.aka}
+            "${post.aka}"
           </small>
         </div>`).join('')}
     </ul>
