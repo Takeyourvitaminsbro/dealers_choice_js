@@ -16,8 +16,7 @@ app.get("/", (req, res) => {
 
 app.get( '/posts/:id', (req, res, next) => {
     const id = req.params.id;
-    const posts = postBank.list();
-    if(!posts.find(id)) {
+    if(!postBank.find(id)) {
       const postError = new Error ("Post does not exist");
       next(postError);
     }
@@ -28,10 +27,10 @@ app.get( '/posts/:id', (req, res, next) => {
   });
 
   //errors
-  // app.use((err, req, res, next) => {
-  //     console.error(err.stack);
-  //     res.status(500).send('Something broke!');
-  // })
+  app.use((err, req, res, next) => {
+      console.error(err.stack);
+      res.status(500).send('Something broke!');
+  })
 
 
 const PORT = 3000;

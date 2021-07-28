@@ -1,4 +1,10 @@
+@font-face {
+    font-family: lumos;
+    src: url(/style/HARRYP__.TTF);
+}
 
 body {
+    font-size: x-large;
+    font-family: lumos;
     background-color: aquamarine;
 }
