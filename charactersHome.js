@@ -1,6 +1,6 @@
 
 
-module.exports = () => `<!DOCTYPE html>
+module.exports = (posts) => `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,18 @@ module.exports = () => `<!DOCTYPE html>
     <title>Document</title>
 </head>
 <body>
-    <h1>this is a title</h1>
+    <ul>
+        ${posts.map(post => `
+        <div>
+          <p>
+            <span>${post.id}. </span>
+            <a href="/posts/${post.id}">${post.name}</a>
+            
+          </p>
+          <small class>
+            ${post.aka}
+          </small>
+        </div>`).join('')}
+    </ul>
 </body>
-</html>`;
+</html>`

@@ -12,7 +12,6 @@ module.exports = (post) => `<!DOCTYPE html>
             <p class='charTitle'>
                 <span>${post.id}. </span> ${post.name}   aka "${post.aka}"
             </p>
-                <img src=${post.pic} alt="pic">
             <ul>
                 <li> Blood status: ${post.blood}</li>
                 <li> House: ${post.house}</li>
